@@ -1,0 +1,10 @@
+.img-disp {
+  height: 150px;
+  width: 150px;
+  display: block;
+  padding-bottom: 20px;
+}
+
+.top-margin {
+  margin-top: 50px;
+}

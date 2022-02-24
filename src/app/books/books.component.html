@@ -1,0 +1,24 @@
+<div style="text-align:center">
+  <h2>Hello {{name}}</h2>
+  <h2>Welcome to world of Books</h2>
+  <img width="300" alt="Angular Logo" src="../assets/books.jpg">
+</div>
+<div class="row" *ngIf="display">
+  <div class="col-md-12 inline-but">
+    <h2>Click me to view some good books !!!</h2>
+    <button type="button" class="btn btn-primary ml-4" (click)="navigateToUrl()">Lets GO</button>
+  </div>
+</div>
+<div class="container">
+  <div class="row top-margin">
+    <ul *ngIf="books && books.length > 0">
+      <li *ngFor="let book of books">
+        <img class="img-disp" src='../../assets/{{book.id}}.jpg' [alt]="book.title">
+        <h3>{{book.title}}</h3>
+      </li>
+    </ul>
+  </div>
+</div>
+<div>
+  <button (click)="logout()" style="position: absolute; margin-left: 50%;">Logout</button>
+</div>
